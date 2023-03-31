@@ -3,7 +3,8 @@ import "@hotwired/turbo-rails"
 import "controllers"
 
 import * as jquery from "jquery"
-import "semantic-ui" 
+import "semantic-ui"
+import "channels" 
 
 $('.message .close')
   .on('click', function() {
