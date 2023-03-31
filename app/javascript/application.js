@@ -4,3 +4,12 @@ import "controllers"
 
 import * as jquery from "jquery"
 import "semantic-ui" 
+
+$('.message .close')
+  .on('click', function() {
+    $(this)
+      .closest('.message')
+      .transition('fade')
+    ;
+  })
+;
