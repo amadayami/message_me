@@ -7,6 +7,7 @@ import "semantic-ui"
 import "channels" 
 
 import { scroll_bottom } from "./scroll_bottom"
+import { submit_message } from "./submit_message"
 
 $('.message .close')
   .on('click', function() {
@@ -28,5 +29,6 @@ $('.ui.menu a.item').on('click', function() {
 })
 
 $(document).on("turbo:load", () => {
+  submit_message();
   scroll_bottom();
 })
