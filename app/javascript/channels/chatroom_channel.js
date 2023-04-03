@@ -1,5 +1,7 @@
 import consumer from "channels/consumer"
 
+import { scroll_bottom } from "../scroll_bottom"
+
 consumer.subscriptions.create("ChatroomChannel", {
   connected() {
     // Called when the subscription is ready for use on the server

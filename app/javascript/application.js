@@ -6,11 +6,7 @@ import * as jquery from "jquery"
 import "semantic-ui"
 import "channels" 
 
-scroll_bottom = function() {
-  if ($('#messages').length > 0) {
-    $('#messages').scrollTop($('#messages')[0].scrollHeight);
-  }
-}
+import { scroll_bottom } from "./scroll_bottom"
 
 $('.message .close')
   .on('click', function() {
@@ -32,5 +28,5 @@ $('.ui.menu a.item').on('click', function() {
 })
 
 $(document).on("turbo:load", () => {
-  console.log("turbo!");
+  scroll_bottom();
 })
