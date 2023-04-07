@@ -37,14 +37,15 @@
       <div class="content">
         <div class="ui secondary vertical pointing menu">
           <a class="active item">
-            Home
+            Active Users
           </a>
-          <a class="item">
-            Messages
-          </a>
-          <a class="item">
-            Friends
-          </a>
+          <ul>
+            <% (ActionCable.server.connections.map(&:current_user) + [current_user]).uniq.each do |user| %>
+              <li>
+                <%= user.username %>
+              </li> 
+            <% end %>  
+          </ul>
         </div>
       </div>
     </div>
