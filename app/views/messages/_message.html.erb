@@ -1,7 +1,11 @@
 <div class="event">
     <div class="content">
-      <div class="summary">
-         <em><%= message.user.username %></em>: <%= message.body %>
+      <div class="summary" style="font-weight:revert;">
+        <% if message.user == current_user %>
+          <em><%= message.user.username %></em>: <%= message.body %>
+        <% else %>
+          <strong><%= message.user.username %></strong>: <%= message.body %>
+        <% end %>
       </div>
     </div>
   </div>
