@@ -19,7 +19,9 @@
           <div class="field">
             <div class="ui fluid icon focus input">
               <%= f.text_field :body %>
-              <%= f.button '<i class="black icon pencil alternate"></i>'.html_safe %>
+              <%= f.button do %>
+                <i class="black icon pencil alternate"></i>
+              <% end %>
             </div>
           </div>
         <% end %>
