@@ -32,3 +32,8 @@ $(document).on("turbo:load", () => {
   submit_message();
   scroll_bottom();
 })
+
+document.getElementById("new_message").addEventListener("turbo:submit-start", () => {
+  console.log(" meow ");
+  document.getElementById("message_body").value=""
+})
